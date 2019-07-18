@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码的切换</title>
+</head>
+<body>
+<h2>切换验证码</h2>
+<script>
+    function changeImageCode() {
+        document.getElementById('btn').isDisabled = true;
+        document.getElementById('identity').src = 'code?ts='+ new Date().getTime();
+
+    }
+
+</script>
+<image src="code" id="identity" onload="btn.disable=false" style="cursor:pointer; vertical-align: top;"></image>
+<input type="button" value="看不清，更换验证码" onclick="changeImageCode()" id="btn" style="vertical-align: top;">
+
+</body>
+</html>
